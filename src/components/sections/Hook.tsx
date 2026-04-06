@@ -1,6 +1,7 @@
 import { Compass, Database, TrendingUp } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/Button';
+import { Reveal } from '@/components/ui/Reveal';
 
 export function Hook() {
   const t = useTranslations('Hook');
@@ -14,28 +15,30 @@ export function Hook() {
   return (
     <section className="site-section section-dark" id="hook">
       <div className="site-container">
-        <div className="section-header">
+        <Reveal className="section-header">
           <h2 className="section-title">{t('title')}</h2>
           <p className="section-description">{t('subtitle')}</p>
-        </div>
+        </Reveal>
 
         <div className="cards-grid cards-grid-3">
-          {features.map((feature) => {
+          {features.map((feature, index) => {
             const Icon = feature.icon;
 
             return (
-              <article key={feature.title} className="glass-card">
-                <div className="icon-frame">
-                  <Icon size={24} />
-                </div>
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-              </article>
+              <Reveal key={feature.title} delay={0.08 * index}>
+                <article className="glass-card">
+                  <div className="icon-frame">
+                    <Icon size={24} />
+                  </div>
+                  <h3>{feature.title}</h3>
+                  <p>{feature.description}</p>
+                </article>
+              </Reveal>
             );
           })}
         </div>
 
-        <div className="section-cta">
+        <Reveal className="section-cta" delay={0.22}>
           <Button
             href="https://wa.me/5531973373728?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20apresenta%C3%A7%C3%A3o."
             target="_blank"
@@ -44,7 +47,7 @@ export function Hook() {
           >
             {t('cta')}
           </Button>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

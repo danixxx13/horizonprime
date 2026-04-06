@@ -1,5 +1,6 @@
 import { Activity, BrainCircuit, EyeOff, FileSearch, History } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Reveal } from '@/components/ui/Reveal';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 
 export function Problem() {
@@ -16,20 +17,24 @@ export function Problem() {
   return (
     <section id="problem" className="site-section section-muted">
       <div className="site-container">
-        <SectionHeader badge={t('badge')} title={t('title')} subtitle={t('subtitle')} />
+        <Reveal>
+          <SectionHeader badge={t('badge')} title={t('title')} subtitle={t('subtitle')} />
+        </Reveal>
 
         <div className="cards-grid cards-grid-3 problem-grid">
-          {problems.map((problem) => {
+          {problems.map((problem, index) => {
             const Icon = problem.icon;
 
             return (
-              <article key={problem.title} className="glass-card">
-                <div className="icon-frame">
-                  <Icon size={24} />
-                </div>
-                <h3>{problem.title}</h3>
-                <p>{problem.description}</p>
-              </article>
+              <Reveal key={problem.title} delay={0.05 * index}>
+                <article className="glass-card">
+                  <div className="icon-frame">
+                    <Icon size={24} />
+                  </div>
+                  <h3>{problem.title}</h3>
+                  <p>{problem.description}</p>
+                </article>
+              </Reveal>
             );
           })}
         </div>

@@ -1,5 +1,6 @@
 import { BarChart3, Crosshair, Database, Zap } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Reveal } from '@/components/ui/Reveal';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 
 export function Solution() {
@@ -16,22 +17,26 @@ export function Solution() {
     <section id="solution" className="site-section section-dark">
       <div className="section-halo section-halo-right" />
       <div className="site-container">
-        <SectionHeader badge={t('badge')} title={t('title')} subtitle={t('subtitle')} />
+        <Reveal>
+          <SectionHeader badge={t('badge')} title={t('title')} subtitle={t('subtitle')} />
+        </Reveal>
 
         <div className="cards-grid cards-grid-2">
-          {solutions.map((solution) => {
+          {solutions.map((solution, index) => {
             const Icon = solution.icon;
 
             return (
-              <article key={solution.title} className="glass-card solution-card">
-                <div className="icon-frame">
-                  <Icon size={24} />
-                </div>
-                <div>
-                  <h3>{solution.title}</h3>
-                  <p>{solution.description}</p>
-                </div>
-              </article>
+              <Reveal key={solution.title} delay={0.06 * index}>
+                <article className="glass-card solution-card">
+                  <div className="icon-frame">
+                    <Icon size={24} />
+                  </div>
+                  <div>
+                    <h3>{solution.title}</h3>
+                    <p>{solution.description}</p>
+                  </div>
+                </article>
+              </Reveal>
             );
           })}
         </div>

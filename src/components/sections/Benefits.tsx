@@ -1,5 +1,6 @@
 import { CheckCircle2 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Reveal } from '@/components/ui/Reveal';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 
 export function Benefits() {
@@ -10,14 +11,18 @@ export function Benefits() {
   return (
     <section id="benefits" className="site-section section-muted">
       <div className="site-container">
-        <SectionHeader badge={t('badge')} title={t('title')} subtitle={t('subtitle')} />
+        <Reveal>
+          <SectionHeader badge={t('badge')} title={t('title')} subtitle={t('subtitle')} />
+        </Reveal>
 
         <div className="benefits-grid">
-          {benefits.map((benefit) => (
-            <article key={benefit} className="benefit-item">
-              <CheckCircle2 size={24} color="#3b82f6" />
-              <span>{benefit}</span>
-            </article>
+          {benefits.map((benefit, index) => (
+            <Reveal key={benefit} delay={0.05 * index}>
+              <article className="benefit-item">
+                <CheckCircle2 size={24} color="#3b82f6" />
+                <span>{benefit}</span>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>
