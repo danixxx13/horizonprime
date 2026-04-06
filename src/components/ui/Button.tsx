@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 
 interface BaseProps {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'light' | 'ghost-light';
   size?: 'sm' | 'md' | 'lg';
 }
 
@@ -11,19 +11,21 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & BaseProps & { href?
 type AnchorProps = AnchorHTMLAttributes<HTMLAnchorElement> & BaseProps & { href: string };
 
 export function Button({ className, variant = 'primary', size = 'md', ...props }: ButtonProps | AnchorProps) {
-  const baseStyles = 'inline-flex items-center justify-center font-medium transition-all active:scale-95 disabled:opacity-50 disabled:pointer-events-none rounded-full whitespace-nowrap';
+  const baseStyles = 'btn whitespace-nowrap disabled:pointer-events-none disabled:opacity-50';
   
   const variants = {
-    primary: 'bg-blue-600 text-white hover:bg-blue-500 shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)]',
-    secondary: 'bg-slate-800 text-white hover:bg-slate-700 border border-slate-700',
-    outline: 'border border-blue-500/50 text-blue-400 hover:bg-blue-500/10',
-    ghost: 'text-slate-300 hover:text-white hover:bg-white/5',
+    primary: 'btn-primary',
+    secondary: 'btn-secondary',
+    outline: 'btn-outline',
+    ghost: 'border border-transparent bg-transparent text-slate-300 hover:border-white/10 hover:bg-white/5 hover:text-white',
+    light: 'btn-light',
+    'ghost-light': 'btn-ghost-light',
   };
 
   const sizes = {
-    sm: 'h-9 px-4 text-sm',
-    md: 'h-11 px-6 text-base',
-    lg: 'h-14 px-8 text-lg font-semibold',
+    sm: 'min-h-10 px-4 text-sm',
+    md: '',
+    lg: 'btn-large',
   };
 
   const classes = cn(baseStyles, variants[variant], sizes[size], className);

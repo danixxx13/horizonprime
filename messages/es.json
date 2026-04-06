@@ -12,8 +12,17 @@
     "description": "Transformamos crecimiento horizontal en visión centralizada, control, trazabilidad y decisiones más inteligentes."
   },
   "Hero": {
+    "badge": "Horizon Prime Intelligence",
     "title": "Tu empresa crece de forma horizontal. ¿Tu gestión logra ver el panorama completo?",
     "subtitle": "Crecer es genial. Crecer con claridad es Prime. Integramos información de la máquina local, del servidor y de los sistemas de la empresa para devolverte el control absoluto y la visibilidad para tomar decisiones.",
+    "metric1Title": "3 capas",
+    "metric1Desc": "Endpoints, servidores y sistemas heredados hablando el mismo idioma.",
+    "metric2Title": "Visión central",
+    "metric2Desc": "KPIs, trazabilidad y contexto operativo en una sola línea de tiempo.",
+    "metric3Title": "Decisión blindada",
+    "metric3Desc": "Más claridad para actuar con velocidad sin depender de suposiciones.",
+    "visualChip1": "Centralización robusta",
+    "visualChip2": "Inteligencia operativa",
     "ctaWpp": "Ver el Producto en Acción",
     "ctaDemo": "Agendar Demostración"
   },
@@ -108,6 +117,7 @@
   },
   "CTA": {
     "title": "Cuanto más crece tu empresa, más difícil es ver sin centralización.",
+    "desc": "Centraliza señales críticas, acompaña la productividad con contexto y toma decisiones con seguridad.",
     "btn": "Entender Cómo Funciona",
     "btnDemo": "Agendar Demostración"
   }
