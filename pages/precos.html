@@ -1,0 +1,158 @@
+<link rel="stylesheet" href="assets/css/pages/precos.css">
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-breadcrumb">
+      <a href="#home">Início</a>
+      <i data-lucide="chevron-right" style="width:14px;height:14px;"></i>
+      <span>Preços</span>
+    </div>
+    <div class="section-label" style="margin:0 auto var(--s4);"><i data-lucide="tag"></i> Planos e Preços</div>
+    <h1 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:var(--s4);">
+      Preços <span class="text-gradient">justos</span> para cada tamanho
+    </h1>
+    <p style="max-width:540px;margin:0 auto;font-size:1.05rem;">
+      Planos transparentes para parceiros e clientes finais. Sem letras miúdas. Sem surpresas na fatura.
+    </p>
+  </div>
+</section>
+
+<!-- BUNDLES -->
+<section class="section">
+  <div class="container">
+    <div class="section-center">
+      <div class="section-label"><i data-lucide="layers"></i> Suítes Combinadas</div>
+      <h2 class="section-title">Mais produtos, <span class="text-gradient">menos custo</span></h2>
+      <p class="section-subtitle">Economize até 45% combinando produtos em uma suíte integrada.</p>
+    </div>
+    <div id="bundles-grid" class="bundles-grid"></div>
+  </div>
+</section>
+
+<!-- INDIVIDUAL PRODUCTS -->
+<section class="section" style="background: var(--color-bg-surface);">
+  <div class="container">
+    <div class="section-center">
+      <div class="section-label"><i data-lucide="box"></i> Produtos Individuais</div>
+      <h2 class="section-title">Preços por <span class="text-gradient">produto</span></h2>
+      <p class="section-subtitle">Adquira apenas o que você precisa. Todos os planos com período de teste gratuito.</p>
+    </div>
+    <div id="individual-accordion" class="individual-accordion"></div>
+  </div>
+</section>
+
+<!-- PARTNER CALCULATOR -->
+<section class="section">
+  <div class="container">
+    <div class="calculator-wrapper" data-aos="fade-up" x-data>
+      <div class="section-label"><i data-lucide="calculator"></i> Calculadora de Parceiro</div>
+      <h2 class="section-title">Calcule seu <span class="text-gradient">desconto</span></h2>
+      <p class="section-subtitle">Quantos clientes você atende? Veja em qual nível você se encaixa e quanto economiza.</p>
+
+      <div class="calculator-card card">
+        <div class="calc-inner">
+          <div class="calc-slider-area">
+            <label class="form-label">Número de clientes ativos</label>
+            <div class="calc-value-display">
+              <span x-text="$store.precos.clientCount"></span>
+              <span style="color:var(--color-text-muted);font-size:1rem"> clientes</span>
+            </div>
+            <input type="range" min="1" max="30" class="calc-range"
+              x-model="$store.precos.clientCount"
+              :value="$store.precos.clientCount">
+            <div class="calc-range-labels">
+              <span>1</span>
+              <span>5</span>
+              <span>10</span>
+              <span>15</span>
+              <span>20</span>
+              <span>30+</span>
+            </div>
+          </div>
+          <div class="calc-result">
+            <div class="calc-tier-badge" :class="`badge badge-${$store.precos.partnerTier}`">
+              <i data-lucide="award" style="width:14px;height:14px;"></i>
+              Nível <span x-text="$store.precos.tierLabel"></span>
+            </div>
+            <div class="calc-discount">
+              <span x-text="$store.precos.discount + '%'"></span>
+              <small>de desconto</small>
+            </div>
+            <p style="font-size:0.875rem;color:var(--color-text-secondary);text-align:center;">
+              Com o Horizon Business Suite (R$1.497/mês parceiro),
+              você economiza <strong x-text="'R$ ' + Math.round(1497 * $store.precos.discount / 100).toLocaleString('pt-BR')" style="color:var(--color-success)"></strong>/mês
+            </p>
+            <a href="#parceiros" class="btn btn-primary" style="width:100%;">Quero ser parceiro</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--color-bg-surface);">
+  <div class="container" style="max-width:720px;">
+    <div class="section-center">
+      <div class="section-label"><i data-lucide="help-circle"></i> Dúvidas Frequentes</div>
+      <h2 class="section-title">Perguntas sobre <span class="text-gradient">preços</span></h2>
+    </div>
+    <div class="precos-faq" x-data="{ open: null }">
+      <div class="accordion-item">
+        <div class="accordion-header" @click="open = open === 0 ? null : 0">
+          <h4>Os preços são mensais ou anuais?</h4>
+          <i data-lucide="chevron-down" class="accordion-icon" :class="{open: open===0}"></i>
+        </div>
+        <div class="accordion-body" x-show="open === 0" x-transition>
+          Os preços listados são mensais. Planos anuais têm desconto adicional de 15% e podem ser pagos em parcela única ou parcelado em 12x.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" @click="open = open === 1 ? null : 1">
+          <h4>Posso testar antes de contratar?</h4>
+          <i data-lucide="chevron-down" class="accordion-icon" :class="{open: open===1}"></i>
+        </div>
+        <div class="accordion-body" x-show="open === 1" x-transition>
+          Sim! Todos os produtos têm período de teste gratuito de 14 dias, sem necessidade de cartão de crédito. Entre em contato para ativar seu trial.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" @click="open = open === 2 ? null : 2">
+          <h4>Como funciona o preço para parceiros?</h4>
+          <i data-lucide="chevron-down" class="accordion-icon" :class="{open: open===2}"></i>
+        </div>
+        <div class="accordion-body" x-show="open === 2" x-transition>
+          Parceiros cadastrados recebem desconto de 30% a 45% dependendo do número de clientes ativos. O desconto é aplicado automaticamente na fatura mensal e cresce conforme sua carteira aumenta.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" @click="open = open === 3 ? null : 3">
+          <h4>Posso mudar de plano a qualquer momento?</h4>
+          <i data-lucide="chevron-down" class="accordion-icon" :class="{open: open===3}"></i>
+        </div>
+        <div class="accordion-body" x-show="open === 3" x-transition>
+          Sim. Upgrade e downgrade são realizados imediatamente, com ajuste proporcional na fatura do mês vigente. Não há taxa de migração.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" @click="open = open === 4 ? null : 4">
+          <h4>Existe fidelidade mínima?</h4>
+          <i data-lucide="chevron-down" class="accordion-icon" :class="{open: open===4}"></i>
+        </div>
+        <div class="accordion-body" x-show="open === 4" x-transition>
+          Planos mensais não têm fidelidade. Planos anuais têm comprometimento de 12 meses com desconto de 15%. Cancelamento antecipado é possível com aviso de 30 dias.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" @click="open = open === 5 ? null : 5">
+          <h4>Quais formas de pagamento são aceitas?</h4>
+          <i data-lucide="chevron-down" class="accordion-icon" :class="{open: open===5}"></i>
+        </div>
+        <div class="accordion-body" x-show="open === 5" x-transition>
+          Aceitamos boleto bancário, Pix, cartão de crédito (até 12x) e transferência bancária para contratos enterprise. Nota fiscal eletrônica emitida automaticamente.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

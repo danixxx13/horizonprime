@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="assets/css/pages/produtos.css">
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-breadcrumb">
+      <a href="#home">Início</a>
+      <i data-lucide="chevron-right" style="width:14px;height:14px;"></i>
+      <span>Produtos</span>
+    </div>
+    <div class="section-label" style="margin: 0 auto var(--s4);"><i data-lucide="grid-3x3"></i> Catálogo Completo</div>
+    <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--s4);">
+      Nossos <span class="text-gradient">Produtos</span>
+    </h1>
+    <p style="max-width:560px;margin:0 auto;font-size:1.05rem;">
+      10 plataformas SaaS desenvolvidas para resolver os desafios reais das empresas brasileiras. Da infraestrutura à gestão comercial.
+    </p>
+  </div>
+</section>
+
+<!-- FILTERS + PRODUCTS -->
+<section class="section">
+  <div class="container">
+    <!-- Filter Bar -->
+    <div class="produtos-filters">
+      <div class="filter-bar" id="pillar-filter">
+        <button class="filter-tab active" data-pillar="todos">Todos (10)</button>
+        <button class="filter-tab" data-pillar="tech">
+          <span class="badge badge-tech" style="margin-right:4px;">TECH</span>
+          5 produtos
+        </button>
+        <button class="filter-tab" data-pillar="biz">
+          <span class="badge badge-biz" style="margin-right:4px;">BIZ</span>
+          5 produtos
+        </button>
+      </div>
+      <div class="filter-bar" id="category-filter">
+        <button class="filter-tab active" data-category="todos">Todas Categorias</button>
+        <button class="filter-tab" data-category="Monitoramento">Monitoramento</button>
+        <button class="filter-tab" data-category="Segurança">Segurança</button>
+        <button class="filter-tab" data-category="Analytics">Analytics</button>
+        <button class="filter-tab" data-category="Integração">Integração</button>
+        <button class="filter-tab" data-category="Vendas">Vendas</button>
+        <button class="filter-tab" data-category="Gestão">Gestão</button>
+        <button class="filter-tab" data-category="RH">RH</button>
+        <button class="filter-tab" data-category="Produtividade">Produtividade</button>
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div id="products-grid" class="products-grid"></div>
+  </div>
+</section>
+
+<!-- BUNDLES CTA -->
+<section class="section" style="background: var(--color-bg-surface);">
+  <div class="container">
+    <div class="cta-section">
+      <div class="section-label" style="margin: 0 auto var(--s4);"><i data-lucide="layers"></i> Suítes Combinadas</div>
+      <h2>Combine produtos e <span class="text-gradient">economize até 45%</span></h2>
+      <p>Temos suítes prontas para cada perfil de empresa. Ou monte a sua combinação personalizada com nosso especialista.</p>
+      <div class="cta-actions">
+        <a href="#precos" class="btn btn-cta">Ver Planos e Suítes</a>
+        <a href="#contato" class="btn btn-secondary">Montar Combinação Custom</a>
+      </div>
+    </div>
+  </div>
+</section>
