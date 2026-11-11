@@ -90,7 +90,7 @@ export default function Header() {
           </span>
         </a>
 
-        <nav className="desktop-nav" aria-label="NavegaÃ§Ã£o principal">
+        <nav className="desktop-nav" aria-label="Navegação principal">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -156,7 +156,7 @@ export default function Header() {
 
       <div id="mobile-panel" className={`mobile-panel ${menuOpen ? 'is-open' : ''}`}>
         <div className="site-container mobile-panel-inner">
-          <nav className="mobile-nav" aria-label="NavegaÃ§Ã£o mobile">
+          <nav className="mobile-nav" aria-label="Navegação mobile">
             {navLinks.map((link) => (
               <a
                 key={link.href}
