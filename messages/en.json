@@ -9,7 +9,10 @@
     "demo": "Schedule a Demo"
   },
   "Footer": {
-    "description": "We transform horizontal growth into centralized vision, control, traceability, and smarter decisions."
+    "description": "We transform horizontal growth into centralized vision, control, traceability, and smarter decisions.",
+    "catalogue": "Software catalogue",
+    "customServices": "Custom services",
+    "contact": "Contact"
   },
   "Hero": {
     "badge": "Horizon Prime Intelligence",

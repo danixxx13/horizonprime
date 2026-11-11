@@ -1,9 +1,11 @@
 'use client';
 
 import { Instagram, Linkedin } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 
 export default function Footer() {
+  const locale = useLocale();
   const t = useTranslations('Footer');
   const nav = useTranslations('Header');
 
@@ -12,7 +14,7 @@ export default function Footer() {
       <div className="site-container">
         <div className="footer-layout">
           <div className="footer-brand">
-            <a href="#top" className="brand">
+            <a href={`/${locale}#top`} className="brand">
               <span className="brand-mark">H</span>
               <span className="brand-text">
                 HORIZON<span>PRIME</span>
@@ -22,10 +24,13 @@ export default function Footer() {
           </div>
 
           <div className="footer-links">
-            <a href="#solution">{nav('solution')}</a>
-            <a href="#tracker">{nav('tracker')}</a>
-            <a href="#benefits">{nav('benefits')}</a>
-            <a href="#about">{nav('about')}</a>
+            <Link href="/softwares">{t('catalogue')}</Link>
+            <Link href="/sob-demanda">{t('customServices')}</Link>
+            <Link href="/contato">{t('contact')}</Link>
+            <a href={`/${locale}#solution`}>{nav('solution')}</a>
+            <a href={`/${locale}#tracker`}>{nav('tracker')}</a>
+            <a href={`/${locale}#benefits`}>{nav('benefits')}</a>
+            <a href={`/${locale}#about`}>{nav('about')}</a>
           </div>
 
           <div className="footer-social">

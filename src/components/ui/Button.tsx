@@ -1,6 +1,6 @@
 import { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react';
 import { cn } from '@/lib/utils';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 
 interface BaseProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'light' | 'ghost-light';

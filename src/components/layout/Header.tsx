@@ -1,11 +1,13 @@
 'use client';
 
 import { Instagram, Linkedin, Menu, X } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import { useEffect, useMemo, useState } from 'react';
 import { Button } from '@/components/ui/Button';
 
 export default function Header() {
+  const locale = useLocale();
   const t = useTranslations('Header');
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -81,18 +83,18 @@ export default function Header() {
   return (
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="site-container header-inner">
-        <a href="#top" className="brand" aria-label="Voltar ao topo">
+        <a href={`/${locale}#top`} className="brand" aria-label="Voltar ao topo">
           <span className="brand-mark">H</span>
           <span className="brand-text">
             HORIZON<span>PRIME</span>
           </span>
         </a>
 
-        <nav className="desktop-nav" aria-label="Navegação principal">
+        <nav className="desktop-nav" aria-label="NavegaÃ§Ã£o principal">
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={`/${locale}${link.href}`}
               className={`nav-link ${activeSection === link.href.slice(1) ? 'is-active' : ''}`}
             >
               {link.label}
@@ -154,11 +156,11 @@ export default function Header() {
 
       <div id="mobile-panel" className={`mobile-panel ${menuOpen ? 'is-open' : ''}`}>
         <div className="site-container mobile-panel-inner">
-          <nav className="mobile-nav" aria-label="Navegação mobile">
+          <nav className="mobile-nav" aria-label="NavegaÃ§Ã£o mobile">
             {navLinks.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={`/${locale}${link.href}`}
                 className="mobile-link"
                 onClick={() => setMenuOpen(false)}
               >

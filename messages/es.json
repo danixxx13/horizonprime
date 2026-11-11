@@ -1,50 +1,53 @@
 {
   "Header": {
-    "solution": "Nuestra Solución",
-    "howItWorks": "Cómo Funciona",
+    "solution": "Nuestra SoluciÃ³n",
+    "howItWorks": "CÃ³mo Funciona",
     "tracker": "HorizonTracker",
-    "benefits": "Qué Ganas",
+    "benefits": "QuÃ© Ganas",
     "about": "La Empresa",
     "contact": "Hablar con un Experto",
-    "demo": "Agendar Demostración"
+    "demo": "Agendar DemostraciÃ³n"
   },
   "Footer": {
-    "description": "Transformamos crecimiento horizontal en visión centralizada, control, trazabilidad y decisiones más inteligentes."
+    "description": "Transformamos crecimiento horizontal en visiÃ³n centralizada, control, trazabilidad y decisiones mÃ¡s inteligentes.",
+    "catalogue": "Catálogo de software",
+    "customServices": "Servicios a medida",
+    "contact": "Contacto"
   },
   "Hero": {
     "badge": "Horizon Prime Intelligence",
-    "title": "Tu empresa crece de forma horizontal. ¿Tu gestión logra ver el panorama completo?",
-    "subtitle": "Crecer es genial. Crecer con claridad es Prime. Integramos información de la máquina local, del servidor y de los sistemas de la empresa para devolverte el control absoluto y la visibilidad para tomar decisiones.",
+    "title": "Tu empresa crece de forma horizontal. Â¿Tu gestiÃ³n logra ver el panorama completo?",
+    "subtitle": "Crecer es genial. Crecer con claridad es Prime. Integramos informaciÃ³n de la mÃ¡quina local, del servidor y de los sistemas de la empresa para devolverte el control absoluto y la visibilidad para tomar decisiones.",
     "metric1Title": "3 capas",
     "metric1Desc": "Endpoints, servidores y sistemas heredados hablando el mismo idioma.",
-    "metric2Title": "Visión central",
-    "metric2Desc": "KPIs, trazabilidad y contexto operativo en una sola línea de tiempo.",
-    "metric3Title": "Decisión blindada",
-    "metric3Desc": "Más claridad para actuar con velocidad sin depender de suposiciones.",
-    "visualChip1": "Centralización robusta",
+    "metric2Title": "VisiÃ³n central",
+    "metric2Desc": "KPIs, trazabilidad y contexto operativo en una sola lÃ­nea de tiempo.",
+    "metric3Title": "DecisiÃ³n blindada",
+    "metric3Desc": "MÃ¡s claridad para actuar con velocidad sin depender de suposiciones.",
+    "visualChip1": "CentralizaciÃ³n robusta",
     "visualChip2": "Inteligencia operativa",
-    "ctaWpp": "Ver el Producto en Acción",
-    "ctaDemo": "Agendar Demostración"
+    "ctaWpp": "Ver el Producto en AcciÃ³n",
+    "ctaDemo": "Agendar DemostraciÃ³n"
   },
   "Hook": {
     "title": "A medida que la empresa crece, los datos se dispersan.",
-    "subtitle": "La expansión sin centralización genera ruido. Horizon Prime integra todo, rastrea lo que importa y centraliza la información para que tu gestión siga al mando.",
+    "subtitle": "La expansiÃ³n sin centralizaciÃ³n genera ruido. Horizon Prime integra todo, rastrea lo que importa y centraliza la informaciÃ³n para que tu gestiÃ³n siga al mando.",
     "b1": "Crecer sin perder el control",
-    "d1": "La expansión desordenada genera caos. Transformamos plataformas distantes en inteligencia conectada.",
+    "d1": "La expansiÃ³n desordenada genera caos. Transformamos plataformas distantes en inteligencia conectada.",
     "b2": "El fin de las suposiciones",
-    "d2": "Información perdida a lo largo de la operación ahora forma una única línea de tiempo ejecutiva.",
-    "b3": "Visión Estratégica",
-    "d3": "Basta de reaccionar. Descubre exactamente cómo rinde la operación cruzando datos en tiempo real.",
-    "cta": "Solicitar Presentación"
+    "d2": "InformaciÃ³n perdida a lo largo de la operaciÃ³n ahora forma una Ãºnica lÃ­nea de tiempo ejecutiva.",
+    "b3": "VisiÃ³n EstratÃ©gica",
+    "d3": "Basta de reaccionar. Descubre exactamente cÃ³mo rinde la operaciÃ³n cruzando datos en tiempo real.",
+    "cta": "Solicitar PresentaciÃ³n"
   },
   "Problem": {
     "badge": "La Realidad",
     "title": "La oscuridad de los datos dispersos",
-    "subtitle": "Más sistemas, más áreas, más datos generados a cada segundo.",
+    "subtitle": "MÃ¡s sistemas, mÃ¡s Ã¡reas, mÃ¡s datos generados a cada segundo.",
     "p1": "Datos dispersos",
-    "d1": "Información oculta dentro de diversas herramientas y sistemas que no se comunican.",
+    "d1": "InformaciÃ³n oculta dentro de diversas herramientas y sistemas que no se comunican.",
     "p2": "Falta de visibilidad general",
-    "d2": "Resulta imposible saber en tiempo real si la operación expandida está rindiendo bien.",
+    "d2": "Resulta imposible saber en tiempo real si la operaciÃ³n expandida estÃ¡ rindiendo bien.",
     "p3": "Dificultad para medir resultados",
     "d3": "Falta de visibilidad sobre el esfuerzo y la productividad a nivel individual de los colaboradores.",
     "p4": "Ausencia de trazabilidad",
@@ -54,71 +57,71 @@
   },
   "Solution": {
     "badge": "La Respuesta",
-    "title": "Crecimiento horizontal con visión Prime.",
-    "subtitle": "No creamos una herramienta más. Creamos el ecosistema que las conecta a todas.",
+    "title": "Crecimiento horizontal con visiÃ³n Prime.",
+    "subtitle": "No creamos una herramienta mÃ¡s. Creamos el ecosistema que las conecta a todas.",
     "s1": "Inteligencia de Negocio",
-    "d1": "Generación de KPIs críticos e insumos esenciales de alto nivel ejecutivo.",
+    "d1": "GeneraciÃ³n de KPIs crÃ­ticos e insumos esenciales de alto nivel ejecutivo.",
     "s2": "Rastreo Indiscutible",
-    "d2": "Auditoría de flujos de trabajo desde el primer hasta el último byte en tiempo real.",
-    "s3": "Centralización Robusta",
-    "d3": "Conexión pesada entre sistemas, ERPs y cualquier base heredada de la compañía.",
+    "d2": "AuditorÃ­a de flujos de trabajo desde el primer hasta el Ãºltimo byte en tiempo real.",
+    "s3": "CentralizaciÃ³n Robusta",
+    "d3": "ConexiÃ³n pesada entre sistemas, ERPs y cualquier base heredada de la compaÃ±Ã­a.",
     "s4": "Productividad Real",
-    "d4": "Comprende las fuerzas de tu operación y asegura eficiencia, sin microgestión."
+    "d4": "Comprende las fuerzas de tu operaciÃ³n y asegura eficiencia, sin microgestiÃ³n."
   },
   "HowItWorks": {
-    "badge": "La Ingeniería",
+    "badge": "La IngenierÃ­a",
     "title": "De lo disperso a lo centralizado",
-    "subtitle": "Cómo capturamos el ruido y entregamos respuestas",
+    "subtitle": "CÃ³mo capturamos el ruido y entregamos respuestas",
     "s1": "1. Recolectores Ocultos",
-    "d1": "Nuestros agentes monitorean eventos críticos en los extremos en completo silencio.",
-    "s2": "2. Unificación de Bases",
+    "d1": "Nuestros agentes monitorean eventos crÃ­ticos en los extremos en completo silencio.",
+    "s2": "2. UnificaciÃ³n de Bases",
     "d2": "Los datos aislados de cada sector comienzan a hablar el mismo idioma.",
     "s3": "3. Cruce Prime",
-    "d3": "Extracción enfocada en encontrar anomalías, picos de producción y áreas de riesgo.",
+    "d3": "ExtracciÃ³n enfocada en encontrar anomalÃ­as, picos de producciÃ³n y Ã¡reas de riesgo.",
     "s4": "4. Pantalla de Mando",
     "d4": "La gerencia obtiene control supremo en tiempo real sobre todo el universo de la empresa."
   },
   "Tracker": {
     "badge": "El Producto: HorizonTracker",
-    "title": "Menos datos dispersos. Más claridad para decidir.",
-    "subtitle": "Una única visión para entender, anticipar y dirigir toda tu operación.",
-    "desc": "Este no es un software más en tu pila corporativa. HorizonTracker es el motor robusto de centralización, diseñado para unificar todos los signos vitales del negocio. Visibilidad absoluta de lo que ocurre en la fábrica, el servidor web y la máquina del colaborador.",
-    "src1": "Máquinas Físicas (Endpoints)",
+    "title": "Menos datos dispersos. MÃ¡s claridad para decidir.",
+    "subtitle": "Una Ãºnica visiÃ³n para entender, anticipar y dirigir toda tu operaciÃ³n.",
+    "desc": "Este no es un software mÃ¡s en tu pila corporativa. HorizonTracker es el motor robusto de centralizaciÃ³n, diseÃ±ado para unificar todos los signos vitales del negocio. Visibilidad absoluta de lo que ocurre en la fÃ¡brica, el servidor web y la mÃ¡quina del colaborador.",
+    "src1": "MÃ¡quinas FÃ­sicas (Endpoints)",
     "sr1Desc": "Registro exacto del uso, actividades y esfuerzo en contexto local",
     "src2": "Sistemas Heredados",
-    "sr2Desc": "Interconexión con ERPs, CRMs y otras herramientas diarias",
+    "sr2Desc": "InterconexiÃ³n con ERPs, CRMs y otras herramientas diarias",
     "src3": "Servidores y Nube",
     "sr3Desc": "Monitoreo denso de la carga operativa y accesos a bases de datos",
-    "core": "Núcleo HorizonTracker",
-    "coreDesc": "La central donde se genera y expone la máxima claridad.",
+    "core": "NÃºcleo HorizonTracker",
+    "coreDesc": "La central donde se genera y expone la mÃ¡xima claridad.",
     "cta": "Conocer HorizonTracker"
   },
   "Benefits": {
     "badge": "Logros Destacados",
-    "title": "Tu operación no puede ser ciega",
+    "title": "Tu operaciÃ³n no puede ser ciega",
     "subtitle": "Lo que ganas al dejar de adivinar y comenzar a rastrear lo que verdaderamente importa.",
     "b1": "Donde hay datos aislados, forjamos visibilidad",
-    "b2": "Ya no eres rehén de informes atrasados. Ve todo en tiempo real",
-    "b3": "Escaneo de productividad mucho más allá de la gestión básica",
+    "b2": "Ya no eres rehÃ©n de informes atrasados. Ve todo en tiempo real",
+    "b3": "Escaneo de productividad mucho mÃ¡s allÃ¡ de la gestiÃ³n bÃ¡sica",
     "b4": "Rastreo impecable de rutinas cruciales en el sistema",
-    "b5": "Decisión estratégica fundamentada en registros blindados",
-    "b6": "Escala de facturación sostenida por la máxima eficiencia"
+    "b5": "DecisiÃ³n estratÃ©gica fundamentada en registros blindados",
+    "b6": "Escala de facturaciÃ³n sostenida por la mÃ¡xima eficiencia"
   },
   "Partners": {
-    "badge": "Qué Esperar de Nosotros",
+    "badge": "QuÃ© Esperar de Nosotros",
     "title": "Validado Por la Industria",
-    "subtitle": "Preparados para centralizar infraestructuras construidas sobre las mayores plataformas tecnológicas."
+    "subtitle": "Preparados para centralizar infraestructuras construidas sobre las mayores plataformas tecnolÃ³gicas."
   },
   "About": {
     "badge": "Sobre Inteligencia Prime",
-    "title": "Tratamos los datos operativos como activos estratégicos",
-    "desc": "Horizon Prime comprende profundamente el dolor que causa la falta de control. Nuestra misión es poner a la gerencia en el asiento del conductor nuevamente, unificando crecimiento y trazabilidad a través de software robusto, 100% enfocado en el impacto operativo real.",
+    "title": "Tratamos los datos operativos como activos estratÃ©gicos",
+    "desc": "Horizon Prime comprende profundamente el dolor que causa la falta de control. Nuestra misiÃ³n es poner a la gerencia en el asiento del conductor nuevamente, unificando crecimiento y trazabilidad a travÃ©s de software robusto, 100% enfocado en el impacto operativo real.",
     "cta": "Hablar con un Experto"
   },
   "CTA": {
-    "title": "Cuanto más crece tu empresa, más difícil es ver sin centralización.",
-    "desc": "Centraliza señales críticas, acompaña la productividad con contexto y toma decisiones con seguridad.",
-    "btn": "Entender Cómo Funciona",
-    "btnDemo": "Agendar Demostración"
+    "title": "Cuanto mÃ¡s crece tu empresa, mÃ¡s difÃ­cil es ver sin centralizaciÃ³n.",
+    "desc": "Centraliza seÃ±ales crÃ­ticas, acompaÃ±a la productividad con contexto y toma decisiones con seguridad.",
+    "btn": "Entender CÃ³mo Funciona",
+    "btnDemo": "Agendar DemostraciÃ³n"
   }
 }
