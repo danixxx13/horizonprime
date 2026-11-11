@@ -1,0 +1,256 @@
+<link rel="stylesheet" href="assets/css/pages/contato.css">
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-breadcrumb">
+      <a href="#home">Início</a>
+      <i data-lucide="chevron-right" style="width:14px;height:14px;"></i>
+      <span>Contato</span>
+    </div>
+    <div class="section-label" style="margin:0 auto var(--s4);"><i data-lucide="mail"></i> Fale Conosco</div>
+    <h1 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:var(--s4);">
+      Vamos <span class="text-gradient">conversar?</span>
+    </h1>
+    <p style="max-width:500px;margin:0 auto;font-size:1.05rem;">
+      Nossa equipe responde em até 4 horas úteis. Prefere agilidade? Fale pelo WhatsApp.
+    </p>
+  </div>
+</section>
+
+<!-- MAIN CONTACT -->
+<section class="section">
+  <div class="container">
+    <div class="contato-grid">
+
+      <!-- Left: Info -->
+      <div class="contato-info">
+        <!-- WhatsApp primary -->
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C+gostaria+de+conhecer+os+produtos+Horizon+Prime"
+           class="whatsapp-main-btn"
+           target="_blank"
+           rel="noopener noreferrer">
+          <div class="wa-btn-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div>
+            <div class="wa-btn-label">Resposta imediata</div>
+            <div class="wa-btn-text">Falar pelo WhatsApp</div>
+          </div>
+          <i data-lucide="arrow-right" style="margin-left:auto;opacity:0.7"></i>
+        </a>
+
+        <!-- Contact details -->
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon"><i data-lucide="mail"></i></div>
+            <div>
+              <div class="contact-label">E-mail</div>
+              <a href="mailto:contato@horizonprime.com.br" class="contact-value">contato@horizonprime.com.br</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i data-lucide="phone"></i></div>
+            <div>
+              <div class="contact-label">Telefone</div>
+              <a href="tel:+551199999999" class="contact-value">+55 (11) 9999-9999</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i data-lucide="clock"></i></div>
+            <div>
+              <div class="contact-label">Horário de Atendimento</div>
+              <div class="contact-value">Segunda a Sexta, 8h às 18h (BRT)</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+            <div>
+              <div class="contact-label">Localização</div>
+              <div class="contact-value">São Paulo, SP — Brasil</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social -->
+        <div class="contact-social">
+          <a href="#" class="contact-social-btn" aria-label="LinkedIn">
+            <i data-lucide="linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="#" class="contact-social-btn" aria-label="Instagram">
+            <i data-lucide="instagram"></i>
+            <span>Instagram</span>
+          </a>
+          <a href="#" class="contact-social-btn" aria-label="YouTube">
+            <i data-lucide="youtube"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="contato-form-wrapper card">
+        <div style="padding: var(--s6);">
+          <h3 style="margin-bottom:var(--s2);">Envie uma mensagem</h3>
+          <p style="font-size:0.875rem;margin-bottom:var(--s5);">Retornaremos em até 4 horas úteis.</p>
+
+          <form id="contact-form" x-data="contactForm()" @submit.prevent="submitForm">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Nome completo *</label>
+                <input type="text" class="form-input" x-model="form.name" placeholder="Seu nome" required>
+                <span class="form-error" x-show="errors.name" x-text="errors.name"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label">E-mail *</label>
+                <input type="email" class="form-input" x-model="form.email" placeholder="seu@email.com" required>
+                <span class="form-error" x-show="errors.email" x-text="errors.email"></span>
+              </div>
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">Telefone / WhatsApp</label>
+                <input type="tel" class="form-input" x-model="form.phone" placeholder="(11) 99999-9999">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Empresa</label>
+                <input type="text" class="form-input" x-model="form.company" placeholder="Nome da empresa">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Produto de Interesse</label>
+              <select class="form-select" x-model="form.product">
+                <option value="">Selecione um produto (opcional)</option>
+                <optgroup label="HORIZON TECH">
+                  <option>HorizonTracker Pro</option>
+                  <option>HorizonShield</option>
+                  <option>HorizonAudit</option>
+                  <option>HorizonSync</option>
+                  <option>HorizonInsight</option>
+                </optgroup>
+                <optgroup label="HORIZON BIZ">
+                  <option>HorizonCRM</option>
+                  <option>HorizonERP</option>
+                  <option>HorizonFlow</option>
+                  <option>HorizonPeople</option>
+                  <option>HorizonSign</option>
+                </optgroup>
+                <optgroup label="SUÍTES">
+                  <option>Horizon Starter Suite</option>
+                  <option>Horizon Business Suite</option>
+                  <option>Horizon Tech Suite</option>
+                  <option>Horizon Prime Suite (Todos)</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tipo de Contato</label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" x-model="form.type" value="Demo"> Solicitar Demo
+                </label>
+                <label class="radio-label">
+                  <input type="radio" x-model="form.type" value="Parceria"> Ser Parceiro
+                </label>
+                <label class="radio-label">
+                  <input type="radio" x-model="form.type" value="Orçamento"> Orçamento
+                </label>
+                <label class="radio-label">
+                  <input type="radio" x-model="form.type" value="Outros"> Outros
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mensagem *</label>
+              <textarea class="form-textarea" x-model="form.message" placeholder="Conte sobre seu negócio e o que você precisa..." rows="4" required></textarea>
+              <span class="form-error" x-show="errors.message" x-text="errors.message"></span>
+            </div>
+
+            <!-- Success state -->
+            <div x-show="submitted" class="form-success" x-transition>
+              <i data-lucide="check-circle-2" style="color:var(--color-success);width:32px;height:32px;margin:0 auto var(--s3);display:block;"></i>
+              <h4 style="text-align:center;margin-bottom:var(--s2);">Mensagem enviada!</h4>
+              <p style="text-align:center;font-size:0.875rem;">Retornaremos em até 4 horas úteis. Ou fale pelo WhatsApp para resposta imediata.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;" x-show="!submitted" :disabled="loading">
+              <span x-show="!loading">Enviar Mensagem</span>
+              <span x-show="loading">Enviando...</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--color-bg-surface);">
+  <div class="container" style="max-width:720px;">
+    <div class="section-center">
+      <div class="section-label"><i data-lucide="help-circle"></i> Antes de entrar em contato</div>
+      <h2 class="section-title">Perguntas <span class="text-gradient">frequentes</span></h2>
+    </div>
+    <div x-data="{ open: null }">
+      <div class="accordion-item">
+        <div class="accordion-header" @click="open = open===0 ? null : 0">
+          <h4>Quanto tempo leva a implementação?</h4>
+          <i data-lucide="chevron-down" class="accordion-icon" :class="{open: open===0}"></i>
+        </div>
+        <div class="accordion-body" x-show="open===0" x-transition>
+          Produtos como HorizonSign e HorizonCRM ficam ativos em 24h. Produtos mais complexos como HorizonERP têm implantação consultiva de 2 a 6 semanas, dependendo do tamanho da empresa.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" @click="open = open===1 ? null : 1">
+          <h4>Vocês oferecem suporte na implantação?</h4>
+          <i data-lucide="chevron-down" class="accordion-icon" :class="{open: open===1}"></i>
+        </div>
+        <div class="accordion-body" x-show="open===1" x-transition>
+          Sim. Todos os contratos incluem onboarding com nosso time de Customer Success, treinamento dos usuários e suporte técnico nos primeiros 30 dias de uso.
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header" @click="open = open===2 ? null : 2">
+          <h4>Posso migrar dados do meu sistema atual?</h4>
+          <i data-lucide="chevron-down" class="accordion-icon" :class="{open: open===2}"></i>
+        </div>
+        <div class="accordion-body" x-show="open===2" x-transition>
+          Sim. Realizamos migração de dados dos principais sistemas do mercado (Omie, Bling, TOTVS, Salesforce, etc.) como parte do processo de implantação. Para sistemas específicos, consulte nossa equipe.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function contactForm() {
+  return {
+    form: { name: '', email: '', phone: '', company: '', product: '', type: 'Demo', message: '' },
+    errors: {},
+    loading: false,
+    submitted: false,
+
+    validate() {
+      this.errors = {};
+      if (!this.form.name.trim()) this.errors.name = 'Nome é obrigatório';
+      if (!this.form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.form.email)) this.errors.email = 'E-mail inválido';
+      if (!this.form.message.trim() || this.form.message.length < 10) this.errors.message = 'Descreva sua necessidade (mínimo 10 caracteres)';
+      return Object.keys(this.errors).length === 0;
+    },
+
+    async submitForm() {
+      if (!this.validate()) return;
+      this.loading = true;
+
+      // Simulate sending (replace with FormSubmit.co or Netlify Forms in production)
+      await new Promise(r => setTimeout(r, 1200));
+
+      this.loading = false;
+      this.submitted = true;
+      if (window.lucide) lucide.createIcons();
+    }
+  };
+}
+</script>
