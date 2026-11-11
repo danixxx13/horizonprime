@@ -1,40 +1,58 @@
-import { useTranslations } from 'next-intl';
-import { SectionHeader } from '@/components/ui/SectionHeader';
-import { BarChart3, Crosshair, Database, Zap } from 'lucide-react';
+import {SectionHeader} from '@/components/ui/SectionHeader';
+import {siteContent} from '@/content/site';
 
 export function Solution() {
-  const t = useTranslations('Solution');
-
-  const solutions = [
-    { id: 1, title: t('s1'), desc: t('d1'), icon: BarChart3 },
-    { id: 2, title: t('s2'), desc: t('d2'), icon: Crosshair },
-    { id: 3, title: t('s3'), desc: t('d3'), icon: Database },
-    { id: 4, title: t('s4'), desc: t('d4'), icon: Zap },
-  ];
-
   return (
-    <section id="solution" className="py-24 md:py-32 bg-[#020617] relative">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/5 blur-[150px] rounded-full translate-x-1/2 -translate-y-1/2" />
-      </div>
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <SectionHeader badge={t('badge')} title={t('title')} subtitle={t('subtitle')} />
+    <section id="como-resolvemos" className="px-6 py-20 md:py-24">
+      <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.78fr_1.22fr]">
+        <div className="lg:sticky lg:top-28 lg:self-start">
+          <SectionHeader
+            badge={siteContent.solution.eyebrow}
+            title={siteContent.solution.title}
+            subtitle={siteContent.solution.description}
+            align="left"
+          />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-5xl mx-auto">
-          {solutions.map((sol) => {
-            const Icon = sol.icon;
+          <div className="premium-panel premium-outline rounded-[2rem] p-6">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-100">
+              Direção de execução
+            </span>
+            <p className="mt-4 text-sm leading-7 text-slate-200">
+              A Horizon Prime não trata tecnologia como vitrine. A lógica da entrega começa na operação, passa pela arquitetura mais adequada e termina em adoção real, com impacto percebido no negócio.
+            </p>
+          </div>
+        </div>
+
+        <div className="relative space-y-5 lg:pl-12">
+          <div className="absolute bottom-0 left-4 top-0 hidden w-px bg-[linear-gradient(180deg,rgba(45,212,191,0.4),rgba(56,189,248,0.08))] lg:block" />
+
+          {siteContent.solution.steps.map((step, index) => {
+            const Icon = step.icon;
+
             return (
-            <div key={sol.id} className="flex flex-col sm:flex-row gap-6 p-8 rounded-2xl bg-slate-900/40 border border-slate-800/60 hover:bg-slate-800/50 hover:border-blue-500/30 transition-all duration-300">
-              <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
-                <Icon size={32} />
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold text-white mb-3">{sol.title}</h3>
-                <p className="text-slate-400 leading-relaxed">{sol.desc}</p>
-              </div>
-            </div>
-          )})}
+              <article
+                key={step.title}
+                className="premium-panel premium-outline relative rounded-[1.8rem] p-6 lg:ml-8"
+              >
+                <div className="absolute -left-[3.15rem] top-8 hidden h-10 w-10 items-center justify-center rounded-full border border-cyan-300/20 bg-slate-950 text-sm font-semibold text-cyan-100 lg:flex">
+                  {index + 1}
+                </div>
+
+                <div className="flex flex-col gap-6 md:flex-row md:items-start">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-300/20 bg-cyan-300/10 text-cyan-100">
+                    <Icon size={22} />
+                  </div>
+                  <div>
+                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">
+                      Etapa {index + 1}
+                    </span>
+                    <h3 className="font-display mt-3 text-2xl text-white">{step.title}</h3>
+                    <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300">{step.description}</p>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

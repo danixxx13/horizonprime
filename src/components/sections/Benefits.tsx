@@ -1,40 +1,51 @@
-'use client';
-
-import { useTranslations } from 'next-intl';
-import { SectionHeader } from '@/components/ui/SectionHeader';
-import { motion } from 'framer-motion';
-import { CheckCircle2 } from 'lucide-react';
+import {Button} from '@/components/ui/Button';
+import {SectionHeader} from '@/components/ui/SectionHeader';
+import {siteContent} from '@/content/site';
 
 export function Benefits() {
-  const t = useTranslations('Benefits');
-
-  const benefits = [
-    t('b1'), t('b2'), t('b3'), t('b4'), t('b5'), t('b6')
-  ];
-
   return (
-    <section id="benefits" className="py-24 md:py-32 bg-slate-950 relative border-t border-slate-900">
-      <div className="container mx-auto px-6">
-        <SectionHeader badge={t('badge')} title={t('title')} subtitle={t('subtitle')} />
+    <section id="sob-demanda" className="border-y border-white/8 bg-slate-950/35 px-6 py-20 md:py-24">
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.82fr_1.18fr]">
+        <div className="lg:sticky lg:top-28 lg:self-start">
+          <SectionHeader
+            badge={siteContent.customFactory.eyebrow}
+            title={siteContent.customFactory.title}
+            subtitle={siteContent.customFactory.description}
+            align="left"
+          />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6 mt-16 max-w-5xl mx-auto">
-          {benefits.map((benefit, idx) => (
-            <motion.div 
-              key={idx} 
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="flex items-center gap-4 p-5 rounded-xl bg-slate-900/30 border border-slate-800/50 hover:bg-slate-900 hover:border-blue-500/30 transition-all duration-300 group"
-            >
-               <div className="flex-shrink-0 text-blue-500 group-hover:scale-110 transition-transform">
-                 <CheckCircle2 size={24} />
-               </div>
-               <p className="text-slate-200 text-lg font-medium tracking-tight">
-                 {benefit}
-               </p>
-            </motion.div>
-          ))}
+          <div className="premium-panel premium-outline rounded-[2rem] p-6">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-100">
+              Quando essa frente ganha força
+            </span>
+            <p className="mt-4 text-sm leading-7 text-slate-200">
+              Quando a operação pede aderência real, os softwares genéricos viram limite. É nesse ponto que a Horizon Prime entra com construção sob medida, integração e IA aplicada ao fluxo do cliente.
+            </p>
+            <div className="mt-6">
+              <Button href="/sob-demanda" variant="secondary">
+                Ver frente sob demanda
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {siteContent.customFactory.items.map((item, index) => {
+            const Icon = item.icon;
+
+            return (
+              <article
+                key={item.title}
+                className={`rounded-[1.85rem] border border-white/10 p-6 ${index % 2 === 0 ? 'premium-panel premium-outline' : 'bg-[linear-gradient(180deg,rgba(15,23,42,0.84),rgba(2,8,23,0.94))]'}`}
+              >
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-emerald-300/20 bg-emerald-300/10 text-emerald-100">
+                  <Icon size={22} />
+                </div>
+                <h3 className="font-display mt-5 text-2xl text-white">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-slate-300">{item.description}</p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

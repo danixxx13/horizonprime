@@ -10,17 +10,23 @@ interface SectionHeaderProps {
 
 export function SectionHeader({ title, subtitle, badge, align = 'center', className }: SectionHeaderProps) {
   return (
-    <div className={cn('flex flex-col gap-4 mb-14 md:mb-20', align === 'center' ? 'items-center text-center mx-auto' : 'items-start text-left', className)}>
+    <div
+      className={cn(
+        'mb-14 flex flex-col gap-4 md:mb-16',
+        align === 'center' ? 'mx-auto items-center text-center' : 'items-start text-left',
+        className
+      )}
+    >
       {badge && (
-        <span className="inline-block rounded-full bg-blue-500/10 border border-blue-500/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-blue-400">
+        <span className="inline-block rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-100">
           {badge}
         </span>
       )}
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
+      <h2 className="font-display text-3xl leading-tight text-white md:text-4xl lg:text-5xl">
         {title}
       </h2>
       {subtitle && (
-        <p className="max-w-2xl text-lg text-slate-400 mt-2 leading-relaxed">
+        <p className="mt-2 max-w-3xl text-lg leading-8 text-slate-300">
           {subtitle}
         </p>
       )}

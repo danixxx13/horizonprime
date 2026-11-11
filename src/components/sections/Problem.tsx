@@ -1,35 +1,34 @@
-import { useTranslations } from 'next-intl';
-import { SectionHeader } from '@/components/ui/SectionHeader';
-import { FileSearch, EyeOff, Activity, History, BrainCircuit } from 'lucide-react';
+import {SectionHeader} from '@/components/ui/SectionHeader';
+import {siteContent} from '@/content/site';
 
 export function Problem() {
-  const t = useTranslations('Problem');
-
-  const problems = [
-    { id: 1, title: t('p1'), desc: t('d1'), icon: FileSearch },
-    { id: 2, title: t('p2'), desc: t('d2'), icon: EyeOff },
-    { id: 3, title: t('p3'), desc: t('d3'), icon: Activity },
-    { id: 4, title: t('p4'), desc: t('d4'), icon: History },
-    { id: 5, title: t('p5'), desc: t('d5'), icon: BrainCircuit },
-  ];
-
   return (
-    <section id="problem" className="py-24 md:py-32 bg-slate-950 relative border-t border-slate-900">
-      <div className="container mx-auto px-6">
-        <SectionHeader badge={t('badge')} title={t('title')} subtitle={t('subtitle')} />
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 max-w-6xl mx-auto">
-          {problems.map((prob) => {
-            const Icon = prob.icon;
+    <section id="problema" className="border-y border-white/8 bg-slate-950/35 px-6 py-20 md:py-24">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeader
+          badge={siteContent.problem.eyebrow}
+          title={siteContent.problem.title}
+          subtitle={siteContent.problem.description}
+          align="left"
+        />
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {siteContent.problem.items.map((item) => {
+            const Icon = item.icon;
+
             return (
-            <div key={prob.id} className="p-8 rounded-2xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 hover:bg-slate-900 transition-all group">
-              <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-blue-400 mb-6 group-hover:scale-110 group-hover:bg-blue-500/10 transition-all">
-                <Icon size={24} />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">{prob.title}</h3>
-              <p className="text-slate-400 leading-relaxed text-sm">{prob.desc}</p>
-            </div>
-          )})}
+              <article
+                key={item.title}
+                className="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(15,23,42,0.88),rgba(2,8,23,0.92))] p-6"
+              >
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-emerald-300/18 bg-emerald-300/10 text-emerald-100">
+                  <Icon size={22} />
+                </div>
+                <h3 className="font-display mt-5 text-2xl text-white">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-slate-300">{item.description}</p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

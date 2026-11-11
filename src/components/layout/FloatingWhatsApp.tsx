@@ -1,16 +1,19 @@
 'use client';
 import { MessageCircle } from 'lucide-react';
 
+import {createWhatsAppLink} from '@/content/site';
+
 export default function FloatingWhatsApp() {
   return (
     <a
-      href="https://wa.me/5531973373728"
+      href={createWhatsAppLink()}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-[0_4px_24px_rgba(34,197,94,0.3)] transition-all hover:scale-110 hover:bg-green-400 focus:outline-none focus:ring-4 focus:ring-green-300"
+      className="fixed bottom-5 right-5 z-50 inline-flex items-center gap-3 rounded-full border border-emerald-300/30 bg-emerald-500 px-4 py-3 text-sm font-semibold text-slate-950 shadow-[0_18px_45px_rgba(16,185,129,0.35)] transition-transform hover:-translate-y-1 hover:bg-emerald-400 focus:outline-none focus:ring-4 focus:ring-emerald-300/30"
       aria-label="Falar no WhatsApp"
     >
-      <MessageCircle size={28} />
+      <MessageCircle size={20} />
+      <span className="hidden sm:inline">Falar no WhatsApp</span>
     </a>
   );
 }
